@@ -3,12 +3,17 @@ package pl.mlisowski.dbprojekt.administration.domain.core;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import pl.mlisowski.dbprojekt.administration.domain.enums.Role;
+import pl.mlisowski.dbprojekt.borrowings.domain.core.Borrowing;
 import pl.mlisowski.dbprojekt.common.utils.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Set;
 
 @Entity
+@Table(indexes = {
+        @Index(name = "index1", columnList = "ID")
+})
 public class User extends BaseEntity implements UserDetails {
 
     public User(){}
@@ -37,6 +42,9 @@ public class User extends BaseEntity implements UserDetails {
     @OneToOne
     @JoinColumn(name = "address_id")
     private Address address;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Borrowing> borrowings;
 
     public void setUsername(String username) {
         this.username = username;

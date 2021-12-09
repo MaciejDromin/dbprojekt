@@ -2,11 +2,15 @@ package pl.mlisowski.dbprojekt.administration.domain.core;
 
 import pl.mlisowski.dbprojekt.common.utils.BaseEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(indexes = {
+        @Index(name = "index1", columnList = "ID"),
+        @Index(name = "index2", columnList = "CITY"),
+        @Index(name = "index3", columnList = "CITY, ZIPCODE"),
+        @Index(name = "index4", columnList = "CITY, STREET")
+})
 public class Address extends BaseEntity {
 
     public Address(){};
@@ -20,6 +24,7 @@ public class Address extends BaseEntity {
         this.city = city;
         this.street = street;
         this.zipcode = zipcode;
+        this.user = user;
     }
 
     @Column()
