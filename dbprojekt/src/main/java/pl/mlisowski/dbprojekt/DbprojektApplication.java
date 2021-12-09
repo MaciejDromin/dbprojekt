@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DbprojektApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DbprojektApplication.class, args);
+		SpringApplication sa = new SpringApplication(DbprojektApplication.class);
+		sa.run(args);
 	}
 
 }
