@@ -38,6 +38,10 @@ public class UserService {
         return repository.findById(id);
     }
 
+    public Optional<User> findUserByUsername(String username){
+        return repository.findUserByUsername(username);
+    }
+
     public User getUserById(Integer id){
         return repository.getById(id);
     }

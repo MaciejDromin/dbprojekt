@@ -1,6 +1,7 @@
 package pl.mlisowski.dbprojekt.administration.domain.core;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import pl.mlisowski.dbprojekt.administration.domain.enums.Role;
 import pl.mlisowski.dbprojekt.borrowings.domain.core.Borrowing;
@@ -8,6 +9,7 @@ import pl.mlisowski.dbprojekt.common.utils.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -80,7 +82,9 @@ public class User extends BaseEntity implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        Collection<GrantedAuthority> col = new HashSet<>();
+        col.add(new SimpleGrantedAuthority("ADMIN"));
+        return col;
     }
 
     @Override
