@@ -19,7 +19,7 @@ public class UserService {
     }
 
     public User addUser(String name, String password, String role, Integer address, Integer enabled){
-        User u = new User(name, password, Role.valueOf(role), addressService.findAddressById(address).get(), enabled);
+        User u = new User(name, password, Role.valueOf(role), addressService.getAddressById(address), enabled);
         return repository.save(u);
     }
 

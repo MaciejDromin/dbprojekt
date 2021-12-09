@@ -39,7 +39,7 @@ public class User extends BaseEntity implements UserDetails {
     @Column
     private Integer enabled;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "address_id")
     private Address address;
 

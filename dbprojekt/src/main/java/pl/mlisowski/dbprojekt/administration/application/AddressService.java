@@ -23,4 +23,8 @@ public class AddressService {
     public Optional<Address> findAddressById(Integer id){
         return repository.findById(id);
     }
+    
+    public Address getAddressById(Integer id){
+        return repository.getById(id);
+    }
 }

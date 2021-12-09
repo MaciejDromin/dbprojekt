@@ -14,7 +14,7 @@ public class Author extends BaseEntity {
 
     public Author(){}
 
-    public Author(String name, Integer bookCnt, Set<Book> books) {
+    public Author(String name, Integer bookCnt) {
         this.name = name;
         this.bookCnt = bookCnt;
         this.books = books;
@@ -51,5 +51,9 @@ public class Author extends BaseEntity {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    public void incrementBookCnt(){
+        this.bookCnt++;
     }
 }
