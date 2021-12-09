@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01C53C05-A825-D816-7DB5-8F7DA6759809" name="Borrowings">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:28:45 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="7C1C6A5A-680A-0260-759C-4F217000A3D6">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:29:38 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_Id" id="7036ED7F-52E4-DC40-B9B3-5DADEA8946E2">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:29:38 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9761A46-6E19-7E52-1D5A-51FBA9782329" referredColumn="79D5E6B4-B173-9787-7BA6-3A07E76ED907"/>
+</associations>
+</Column>
+<Column name="Book_id" id="EDD1388F-6090-0B77-1921-B038D0218E1C">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:29:38 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3700B946-6244-A910-75B4-CF304D3B5301" referredColumn="1CC17F8D-D043-3356-D8DB-87E122C81216"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48A15DEA-1B1B-79EB-3181-7FB59241D131" name="Borrowings_PK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:29:38 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C1C6A5A-680A-0260-759C-4F217000A3D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5173516A-67A0-1985-6F81-730166EF5B20" name="Borrowings__IDX">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:30:43 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C1C6A5A-680A-0260-759C-4F217000A3D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6E481B1-B65C-126C-54C6-2415099C2755" name="Borrowings__IDXv1">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:30:43 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7036ED7F-52E4-DC40-B9B3-5DADEA8946E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D159D65B-24F1-8443-9C94-D28491BD62F8" name="Borrowings_Users_FK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:30:43 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7036ED7F-52E4-DC40-B9B3-5DADEA8946E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA8B7B5D-B6F0-4DF2-6F73-6FB6F1E481D7" name="Borrowings_Books_FK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:30:43 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDD1388F-6090-0B77-1921-B038D0218E1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

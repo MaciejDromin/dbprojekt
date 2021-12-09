@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2828124-B438-4D56-D56E-8FF68182BC4D" name="Address">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:22:04 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="65DA8F83-601E-7908-8FA4-4A4116CD4B46">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:23:19 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="13D293E2-29CE-A24A-3995-357A53007541">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:23:19 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Street" id="BDC1F5B3-F979-4A03-75A6-3E97799A3C38">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:23:19 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zipcode" id="B57EBB8E-7707-E90D-B8C4-6F501BB284AD">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:23:19 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A257FBC-A749-E564-275F-68FA7D8885F1" name="Address_PK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:24:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65DA8F83-601E-7908-8FA4-4A4116CD4B46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33944EC1-4159-5516-8A21-3A02CA164464" name="Address__IDX">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:24:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65DA8F83-601E-7908-8FA4-4A4116CD4B46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA9E7DAD-933D-7240-84D2-85B130D23B74" name="Address__IDXv1">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:24:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D293E2-29CE-A24A-3995-357A53007541"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74ED6AA5-2B8E-E8E2-3F10-E07466159CF6" name="Address__IDXv2">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:24:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D293E2-29CE-A24A-3995-357A53007541"/>
+<colUsage columnID="B57EBB8E-7707-E90D-B8C4-6F501BB284AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44B255BF-8683-AA3A-ECCE-EBD1D19675FE" name="Address__IDXv3">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:24:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D293E2-29CE-A24A-3995-357A53007541"/>
+<colUsage columnID="BDC1F5B3-F979-4A03-75A6-3E97799A3C38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6D34C4D-1578-5E0B-6668-CBEC528BA64B" name="Users">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:16:17 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="79D5E6B4-B173-9787-7BA6-3A07E76ED907">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:21:54 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="A15E8A7D-32D8-2688-E577-029CA1351612">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:25:05 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Password" id="BEEF9D2A-CFF2-DE6D-7380-F4116F3824B5">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:21:54 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Role" id="D81AE9C2-A892-F084-78A4-DB3E3EE3C974">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:21:54 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address_id" id="CA2B9AA9-E258-DDA8-285E-7C896BB5CB91">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:25:05 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F1184175-EE64-3972-409B-CE779C844B48" referredColumn="65DA8F83-601E-7908-8FA4-4A4116CD4B46"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49A85DFA-C25D-7834-276F-005A65946710" name="Users_PK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:25:05 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79D5E6B4-B173-9787-7BA6-3A07E76ED907"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B43CDA3D-09B1-B15D-142D-E1BE3AA5E194" name="Users__IDX">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:25:05 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79D5E6B4-B173-9787-7BA6-3A07E76ED907"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B7A400D-4F2E-E47A-5D4A-6D9217C51C43" name="Users_Address_FK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:26:02 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA2B9AA9-E258-DDA8-285E-7C896BB5CB91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

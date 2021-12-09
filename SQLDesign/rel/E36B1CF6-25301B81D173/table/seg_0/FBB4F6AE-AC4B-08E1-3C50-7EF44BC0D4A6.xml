@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBB4F6AE-AC4B-08E1-3C50-7EF44BC0D4A6" name="Books">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:26:16 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="1CC17F8D-D043-3356-D8DB-87E122C81216">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:27:42 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="2C71D0DF-8F90-3DE9-1430-F8D6F9931BCF">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:27:42 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="1EC43285-29E2-09CE-D56E-484995FE804B">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:27:42 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Author_id" id="C67F7B6B-B791-53E9-E778-4B9F8D8E9B2D">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:27:42 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7F9DE13-8B6B-4D3F-1229-0113E503717E" referredColumn="252313CA-D712-7AB2-4276-E5E8BD2B0088"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D5368C3F-8583-4064-430A-6A39B17E793A" name="Books_PK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:27:42 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC17F8D-D043-3356-D8DB-87E122C81216"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5994D605-83BC-E2CB-B6B9-D1D89236C514" name="Books__IDX">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:28:31 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC17F8D-D043-3356-D8DB-87E122C81216"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BD66AEE-2139-815F-6D81-8E51719B49F4" name="Books__IDXv1">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:28:31 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C71D0DF-8F90-3DE9-1430-F8D6F9931BCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAD1DC83-A559-DC42-9612-75B3D4A24672" name="Books__IDXv2">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:28:31 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C67F7B6B-B791-53E9-E778-4B9F8D8E9B2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B0487C86-C0CF-808D-1251-61A8243EF9E1" name="Books__IDXv3">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:28:31 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C67F7B6B-B791-53E9-E778-4B9F8D8E9B2D"/>
+<colUsage columnID="2C71D0DF-8F90-3DE9-1430-F8D6F9931BCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7483CB17-4804-5775-DA47-D07FAD7DBF16" name="Books_Authors_FK">
+<createdBy>maciek</createdBy>
+<createdTime>2021-12-09 17:32:24 UTC</createdTime>
+<ownerDesignName>SQLDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C67F7B6B-B791-53E9-E778-4B9F8D8E9B2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
