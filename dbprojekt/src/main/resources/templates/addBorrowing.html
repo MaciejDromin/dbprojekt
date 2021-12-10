@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:each="book : ${books}">
+        <p th:text="${book.id}"></p>
+        <p th:text="${book.name}"></p>
+    </div>
+  <form th:action="@{/borrowings/add}" method="post">
+    <label for="bookId">Id Ksiazki</label>:
+    <input type="text" id="bookId" name="bookId" autofocus="autofocus" /> <br />
+    <input type="submit" value="Wypozycz" />
+  </form>
+</body>
+</html>

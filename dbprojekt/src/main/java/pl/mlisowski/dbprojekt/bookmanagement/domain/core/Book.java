@@ -59,4 +59,12 @@ public class Book extends BaseEntity {
     public void setAuthor(Author author) {
         this.author = author;
     }
+
+    public Integer incrementQuantity(){
+        return ++this.quantity;
+    }
+
+    public Integer decrementQuantity(){
+        return --this.quantity;
+    }
 }

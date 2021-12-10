@@ -4,9 +4,11 @@ import org.springframework.stereotype.Service;
 import pl.mlisowski.dbprojekt.administration.application.port.AddressRepository;
 import pl.mlisowski.dbprojekt.administration.domain.core.Address;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class AddressService {
 
     private AddressRepository repository;

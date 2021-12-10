@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form th:action="@{/books/add}" method="post">
+    <label for="name">Nazwa Ksiazki</label>:
+    <input type="text" id="name" name="name" autofocus="autofocus" /> <br />
+    <label for="authorId">Id Autora</label>:
+    <input type="text" id="authorId" name="authorId" /> <br />
+    <input type="submit" value="Dodaj ksiazke" />
+  </form>
+</body>
+</html>

@@ -5,10 +5,12 @@ import pl.mlisowski.dbprojekt.administration.application.port.UserRepository;
 import pl.mlisowski.dbprojekt.administration.domain.core.User;
 import pl.mlisowski.dbprojekt.administration.domain.enums.Role;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class UserService {
     private UserRepository repository;
     private AddressService addressService;

@@ -9,7 +9,7 @@ import pl.mlisowski.dbprojekt.administration.application.UserService;
 import pl.mlisowski.dbprojekt.administration.domain.core.Address;
 import pl.mlisowski.dbprojekt.administration.domain.enums.Role;
 
-
+//@Component
 public class InitUser implements CommandLineRunner {
 
     @Autowired
@@ -23,7 +23,9 @@ public class InitUser implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //addressService.addAddress("Test", "papa", "Cipa");
-        //userService.addUser("Testowy", enc.encode("test123"), Role.ADMIN.name(), 1);
+        /*Address a1 = addressService.addAddress("Krakowska", "Ulica", "test");
+        userService.addUser("Admin", enc.encode("test123"), Role.ADMIN.name(), a1.getId(), 1);
+        Address a2 = addressService.addAddress("Rabka", "Kolejna", "Nana");
+        userService.addUser("Trzeci", enc.encode("test123"), Role.USER.name(), a2.getId(), 1);*/
     }
 }

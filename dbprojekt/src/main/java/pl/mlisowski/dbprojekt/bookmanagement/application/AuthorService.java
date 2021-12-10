@@ -4,9 +4,12 @@ import org.springframework.stereotype.Service;
 import pl.mlisowski.dbprojekt.bookmanagement.application.port.AuthorRepository;
 import pl.mlisowski.dbprojekt.bookmanagement.domain.core.Author;
 
+import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class AuthorService {
 
     private AuthorRepository repository;
@@ -16,7 +19,7 @@ public class AuthorService {
     }
 
     public Author addAuthor(String name){
-        Author a = new Author(name, 1);
+        Author a = new Author(name, 0);
         return repository.save(a);
     }
 
@@ -32,5 +35,9 @@ public class AuthorService {
 
     public Author getAuthorById(Integer id){
         return repository.getById(id);
+    }
+
+    public List<Author> getAllAuthors(){
+        return repository.findAll();
     }
 }
