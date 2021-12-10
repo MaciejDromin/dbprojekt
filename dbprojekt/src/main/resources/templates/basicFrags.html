@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<nav th:fragment="nav" class="navbar fixed-top navbar-expand-lg navbar-light bg-light primary-bg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a th:href="@{/}" class="nav-link">Główna</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/borrowings/add}" class="nav-link">Wypożycz</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/borrowings/return}" class="nav-link">Zwróć</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/books/add}" class="nav-link">Dodaj książkę</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/authors/add}" class="nav-link">Dodaj Autora</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu primary-bg" aria-labelledby="navbarScrollingDropdown">
+                        <li>
+                            <a th:href="@{/borrowings/}" class="nav-link">Zobacz wypożyczenia</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/users/}" class="nav-link">Użytkownicy</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/users/add}" class="nav-link">Dodaj użytkownika</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/users/remove}" class="nav-link">Usuń użytkownika</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

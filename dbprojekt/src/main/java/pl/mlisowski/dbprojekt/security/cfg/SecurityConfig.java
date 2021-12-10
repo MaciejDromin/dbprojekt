@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import pl.mlisowski.dbprojekt.administration.application.MyUserDetailsService;
-import pl.mlisowski.dbprojekt.administration.application.UserService;
 
 import javax.sql.DataSource;
 
@@ -47,6 +46,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasRole("ADMIN")
                 .antMatchers("/borrowings/")
                 .hasRole("ADMIN")
+                .antMatchers("/")
+                .permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin()
                 .loginPage("/login.html")
