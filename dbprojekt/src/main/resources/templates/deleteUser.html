@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+</head>
+<body>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
+                <div class="col">Id</div>
+                <div class="col">Imie i nazwisko</div>
+                <div class="col">Rola</div>
+                <div class="col">Miasto</div>
+                <div class="col">Ulica</div>
+                <div class="col">Kod pocztowy</div>
+            </div>
+            <div th:each="user : ${users}" class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
+                <div th:text="${user.id}" class="col"></div>
+                <div th:text="${user.username}" class="col"></div>
+                <div th:text="${user.role}" class="col"></div>
+                <div th:text="${user.address.city}" class="col"></div>
+                <div th:text="${user.address.street}" class="col"></div>
+                <div th:text="${user.address.zipcode}" class="col"></div>
+            </div>
+            <form th:action="@{/users/delete}" method="post">
+                <label class="form-label" for="userId">Id uzytkownika</label>:
+                <input class="form-control" type="text" id="userId" name="userId" autofocus="autofocus" /> <br />
+                <input type="submit" value="Usun uzytkownika" />
+            </form>
+          <!---<div th:each="user : ${users}">
+              <p th:text="${user.username}"></p>
+              <p th:text="${user.role}"></p>
+              <p th:text="${user.address.city}"></p>
+              <p th:text="${user.address.zipcode}"></p>
+          </div>--->
+        </div>
+    </main>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
+</html>

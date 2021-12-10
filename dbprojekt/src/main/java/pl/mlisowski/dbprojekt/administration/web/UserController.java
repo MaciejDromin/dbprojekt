@@ -50,4 +50,16 @@ public class UserController {
         model.addAttribute("user", u);
         return "viewUser.html";
     }
+
+    @GetMapping("/delete")
+    public String getDeleteUser(Model model){
+        model.addAttribute("users", service.getAllUsers());
+        return "deleteUser.html";
+    }
+
+    @PostMapping("/delete")
+    public String deleteUser(@RequestParam Integer userId){
+        service.deleteUser(userId);
+        return "viewUser.html";
+    }
 }

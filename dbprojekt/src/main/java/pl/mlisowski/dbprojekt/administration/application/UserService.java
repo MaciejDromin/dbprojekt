@@ -52,4 +52,8 @@ public class UserService {
         return repository.getById(id);
     }
 
+    public void deleteUser(Integer id){
+        repository.deleteById(id);
+    }
+
 }
