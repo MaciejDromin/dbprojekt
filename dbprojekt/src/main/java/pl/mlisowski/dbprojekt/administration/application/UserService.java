@@ -1,5 +1,7 @@
 package pl.mlisowski.dbprojekt.administration.application;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.mlisowski.dbprojekt.administration.application.port.UserRepository;
 import pl.mlisowski.dbprojekt.administration.domain.core.User;
@@ -14,6 +16,8 @@ import java.util.Optional;
 public class UserService {
     private UserRepository repository;
     private AddressService addressService;
+    @Autowired
+    private PasswordEncoder enc;
 
     public UserService(UserRepository repository, AddressService addressService){
         this.repository = repository;
@@ -21,7 +25,7 @@ public class UserService {
     }
 
     public User addUser(String name, String password, String role, Integer address, Integer enabled){
-        User u = new User(name, password, Role.valueOf(role), addressService.getAddressById(address), enabled);
+        User u = new User(name, enc.encode(password), Role.valueOf(role), addressService.getAddressById(address), enabled);
         return repository.save(u);
     }
 

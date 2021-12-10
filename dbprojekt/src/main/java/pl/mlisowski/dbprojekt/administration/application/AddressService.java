@@ -5,6 +5,7 @@ import pl.mlisowski.dbprojekt.administration.application.port.AddressRepository;
 import pl.mlisowski.dbprojekt.administration.domain.core.Address;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,5 +29,13 @@ public class AddressService {
     
     public Address getAddressById(Integer id){
         return repository.getById(id);
+    }
+
+    public List<Address> getAllByUserIsNull(){
+        return repository.getAllByUserIsNull();
+    }
+
+    public List<Address> findAll(){
+        return repository.findAll();
     }
 }

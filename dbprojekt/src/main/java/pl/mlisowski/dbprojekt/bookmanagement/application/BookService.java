@@ -22,9 +22,17 @@ public class BookService {
     }
 
     public Book addBook(String name, Integer quantity, Integer author){
-        Book b = new Book(name, quantity, authorService.getAuthorById(author));
-        authorService.incrementBooks(author);
-        return repository.save(b);
+        Optional<Book> bf = repository.findByNameAndAuthor_Id(name, author);
+        Book b = null;
+        if(bf.isPresent()){
+            incrementQuantity(bf.get().getId());
+            b = bf.get();
+        } else {
+            b = new Book(name, quantity, authorService.getAuthorById(author));
+            authorService.incrementBooks(author);
+            repository.save(b);
+        }
+        return b;
     }
 
     public List<Book> getAllBooks(){

@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
 </head>
 <body>
-  <div th:each="borrowing : ${borrowings}">
-      <p th:text="${borrowing.book.id}"></p>
-      <p th:text="${borrowing.book.name}"></p>
-  </div>
-  <form th:action="@{/borrowings/return}" method="post">
-      <label for="bookId">Id Ksiazki</label>:
-      <input type="text" id="bookId" name="bookId" autofocus="autofocus" /> <br />
-      <input type="submit" value="Zwroc" />
-  </form>
+        <nav th:insert="basicFrags.html :: nav"></nav>
+        <main class="flex-shrink-0">
+            <div class="container">
+              <div th:each="borrowing : ${borrowings}">
+                  <p th:text="${borrowing.book.id}"></p>
+                  <p th:text="${borrowing.book.name}"></p>
+              </div>
+              <form th:action="@{/borrowings/return}" method="post">
+                  <label for="bookId">Id Ksiazki</label>:
+                  <input type="text" id="bookId" name="bookId" autofocus="autofocus" /> <br />
+                  <input type="submit" value="Zwroc" />
+              </form>
+            </div>
+        </main>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
 </html>

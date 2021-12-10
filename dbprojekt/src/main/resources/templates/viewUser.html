@@ -23,12 +23,11 @@
                 <div th:text="${user.address.street}" class="col"></div>
                 <div th:text="${user.address.zipcode}" class="col"></div>
             </div>
-          <!---<div th:each="user : ${users}">
-              <p th:text="${user.username}"></p>
-              <p th:text="${user.role}"></p>
-              <p th:text="${user.address.city}"></p>
-              <p th:text="${user.address.zipcode}"></p>
-          </div>--->
+          <!---<p th:text="${user.username}"></p>
+          <p th:text="${user.role}"></p>
+            <span th:text="${user.address.city}"></span>
+            <span th:text="${user.address.street}"></span>
+            <span th:text="${user.address.zipcode}"></span>--->
         </div>
     </main>
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>

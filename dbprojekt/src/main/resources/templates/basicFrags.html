@@ -14,6 +14,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown"
+                    sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu primary-bg" aria-labelledby="navbarScrollingDropdown">
+                        <li>
+                            <a th:href="@{/borrowings/}" class="nav-link">Zobacz wypożyczenia</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/users/}" class="nav-link">Użytkownicy</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/users/add}" class="nav-link">Dodaj użytkownika</a>
+                        </li>
+                        <!---<li>
+                            <a th:href="@{/users/remove}" class="nav-link">Usuń użytkownika</a>
+                        </li>--->
+                        <li>
+                            <a th:href="@{/address/}" class="nav-link">Adresy</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/address/add}" class="nav-link">Dodaj adres</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/books/}" class="nav-link">Ksiazki</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/authors/}" class="nav-link">Autorzy</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a th:href="@{/}" class="nav-link">Główna</a>
                 </li>
@@ -29,24 +61,13 @@
                 <li class="nav-item">
                     <a th:href="@{/authors/add}" class="nav-link">Dodaj Autora</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Admin
-                    </a>
-                    <ul class="dropdown-menu primary-bg" aria-labelledby="navbarScrollingDropdown">
-                        <li>
-                            <a th:href="@{/borrowings/}" class="nav-link">Zobacz wypożyczenia</a>
-                        </li>
-                        <li>
-                            <a th:href="@{/users/}" class="nav-link">Użytkownicy</a>
-                        </li>
-                        <li>
-                            <a th:href="@{/users/add}" class="nav-link">Dodaj użytkownika</a>
-                        </li>
-                        <li>
-                            <a th:href="@{/users/remove}" class="nav-link">Usuń użytkownika</a>
-                        </li>
-                    </ul>
+                <li class="nav-item"
+                    sec:authorize="isAnonymous()">
+                    <a th:href="@{/login}" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item"
+                    sec:authorize="isAuthenticated()">
+                    <a th:href="@{/logout}" class="nav-link">Logout</a>
                 </li>
             </ul>
         </div>

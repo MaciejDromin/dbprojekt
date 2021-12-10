@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
 </head>
 <body>
-  <p>Wlasnie wypozyczyles</p>
-  <p th:text="${borrowing.book.name}"></p>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+          <h2>Wlasnie wypozyczyles</h2>
+          <p th:text="${borrowing.book.name}"></p>
+        </div>
+    </main>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
 </html>

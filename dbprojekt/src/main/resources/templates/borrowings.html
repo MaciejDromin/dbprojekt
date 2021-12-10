@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
 </head>
 <body>
-  <div th:each="borrowing : ${borrowings}">
-      <p th:text="${borrowing.user.username}"></p>
-      <p th:text="${borrowing.book.name}"></p>
-  </div>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
+                <div class="col">Nazwa osoby wypozyczajacej</div>
+                <div class="col">Miasto osoby</div>
+                <div class="col">Ulica osoby</div>
+                <div class="col">Kod pocztowy osoby</div>
+                <div class="col">Nazwa ksiazki</div>
+                <div class="col">Nazwa autora</div>
+            </div>
+            <div th:each="borrowing : ${borrowings}" class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
+                <div th:text="${borrowing.user.username}" class="col"></div>
+                <div th:text="${borrowing.user.address.city}" class="col"></div>
+                <div th:text="${borrowing.user.address.street}" class="col"></div>
+                <div th:text="${borrowing.user.address.zipcode}" class="col"></div>
+                <div  th:text="${borrowing.book.name}"class="col"></div>
+                <div  th:text="${borrowing.book.author.name}"class="col"></div>
+            </div>
+              <!---<div th:each="borrowing : ${borrowings}">
+                  <p th:text="${borrowing.user.username}"></p>
+                  <p th:text="${borrowing.book.name}"></p>
+              </div>--->
+        </div>
+    </main>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
 </html>

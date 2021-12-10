@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+</head>
+<body>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-4 shadow p-3 bg-white rounded align-items-center">
+                <div class="col">Id</div>
+                <div class="col">Miasto</div>
+                <div class="col">Ulica</div>
+                <div class="col">Kod Pocztowy</div>
+            </div>
+            <div th:each="address : ${addresses}" class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-4 shadow p-3 bg-white rounded align-items-center">
+                <div th:text="${address.id}" class="col"></div>
+                <div th:text="${address.city}" class="col"></div>
+                <div th:text="${address.street}" class="col"></div>
+                <div th:text="${address.zipcode}" class="col"></div>
+            </div>
+            <!---<div th:each="address : ${addresses}">
+                <span th:text="${address.id}"></span>
+                <span th:text="${address.city}"></span>
+                <span th:text="${address.street}"></span>
+                <span th:text="${address.zipcode}"></span>
+            </div>--->
+          <form th:action="@{/users/add}" method="post">
+              <label class="form-label" for="username">Imie i nazwisko</label>:
+              <input class="form-control" type="text" id="username" name="username" autofocus="autofocus" /> <br />
+              <label class="form-label" for="password">Hasło</label>:
+              <input class="form-control" type="password" id="password" name="password" /> <br />
+              <label class="form-label" for="role">Rola</label>:
+              <input class="form-control" type="text" id="role" name="role" /> <br />
+              <label class="form-label" for="addressId">Adres Id</label>:
+              <input class="form-control" type="text" id="addressId" name="addressId" /> <br />
+              <input type="submit" value="Dodaj uzytkownika" />
+          </form>
+        </div>
+    </main>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
+</html>

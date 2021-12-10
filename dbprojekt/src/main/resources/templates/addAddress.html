@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+</head>
+<body>
+  <nav th:insert="basicFrags.html :: nav"></nav>
+  <main class="flex-shrink-0">
+    <div class="container">
+      <form th:action="@{/address/add}" method="post">
+        <label class="form-label" for="city">Miasto</label>:
+        <input class="form-control" type="text" id="city" name="city" autofocus="autofocus" /> <br />
+          <label class="form-label" for="street">Ulica</label>:
+          <input class="form-control" type="text" id="street" name="street" /> <br />
+          <label class="form-label" for="zipcode">Kod pocztowy</label>:
+          <input class="form-control" type="text" id="zipcode" name="zipcode" /> <br />
+        <input type="submit" value="Dodaj adres" />
+      </form>
+    </div>
+  </main>
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+<style>
+  main > .container{
+    padding-top: 90px;
+    padding-bottom: 34px;
+  }
+</style>
+</html>

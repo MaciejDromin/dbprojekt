@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+</head>
+<body>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-4 shadow p-3 bg-white rounded align-items-center">
+                <div class="col">Miasto</div>
+                <div class="col">Ulica</div>
+                <div class="col">Kod Pocztowy</div>
+            </div>
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-4 shadow p-3 bg-white rounded align-items-center">
+                <div th:text="${address.city}" class="col"></div>
+                <div th:text="${address.street}" class="col"></div>
+                <div th:text="${address.zipcode}" class="col"></div>
+            </div>
+          <!---<p th:text="${address.city}"></p>
+          <p th:text="${address.street}"></p>
+          <p th:text="${address.zipcode}"></p>--->
+        </div>
+    </main>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
+</html>

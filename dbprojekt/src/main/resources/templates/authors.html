@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
 </head>
 <body>
-  <div th:each="author : ${authors}">
-      <p th:text="${author.name}"></p>
-      <p th:text="${author.bookCnt}"></p>
-  </div>
+    <nav th:insert="basicFrags.html :: nav"></nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-5 shadow p-3 bg-white rounded align-items-center">
+                <div class="col">Imie i nazwisko</div>
+                <div class="col">Ilosc unikalnych ksiazek w ksiegarnii</div>
+            </div>
+            <div th:each="author : ${authors}" class="mt-4 row row-cols-1 row-cols-sm-3 row-cols-lg-5 shadow p-3 bg-white rounded align-items-center">
+                <div th:text="${author.name}" class="col"></div>
+                <div th:text="${author.bookCnt}" class="col"></div>
+            </div>
+          <!---<div th:each="author : ${authors}">
+              <p th:text="${author.name}"></p>
+              <p th:text="${author.bookCnt}"></p>
+          </div>--->
+        </div>
+    </main>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
+<style>
+    main > .container{
+        padding-top: 90px;
+        padding-bottom: 34px;
+    }
+</style>
 </html>
