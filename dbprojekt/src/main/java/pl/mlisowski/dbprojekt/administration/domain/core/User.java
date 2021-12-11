@@ -28,7 +28,7 @@ public class User extends BaseEntity implements UserDetails {
         this.enabled = enabled;
     }
 
-    @Column()
+    @Column(unique = true)
     private String username;
 
     @Column()

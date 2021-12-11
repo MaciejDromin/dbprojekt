@@ -9,10 +9,18 @@
         <nav th:insert="basicFrags.html :: nav"></nav>
         <main class="flex-shrink-0">
             <div class="container">
-              <div th:each="borrowing : ${borrowings}">
+                <div class="mt-4 row row-cols-1 row-cols-sm-2 shadow p-3 bg-white rounded align-items-center">
+                    <div class="col">Id ksiazki</div>
+                    <div class="col">Nazwa ksiazki</div>
+                </div>
+                <div th:each="borrowing : ${borrowings}" class="mt-4 row row-cols-1 row-cols-sm-2 shadow p-3 bg-white rounded align-items-center">
+                    <div th:text="${borrowing.book.id}" class="col"></div>
+                    <div  th:text="${borrowing.book.name}"class="col"></div>
+                </div>
+              <!---<div th:each="borrowing : ${borrowings}">
                   <p th:text="${borrowing.book.id}"></p>
                   <p th:text="${borrowing.book.name}"></p>
-              </div>
+              </div>--->
               <form th:action="@{/borrowings/return}" method="post">
                   <label for="bookId">Id Ksiazki</label>:
                   <input type="text" id="bookId" name="bookId" autofocus="autofocus" /> <br />

@@ -58,7 +58,10 @@ public class UserController {
     }
 
     @PostMapping("/delete")
-    public String deleteUser(@RequestParam Integer userId){
+    public String deleteUser(@RequestParam Integer userId,
+                             Model model){
+        User u = service.getUserById(userId);
+        model.addAttribute("user", u);
         service.deleteUser(userId);
         return "viewUser.html";
     }

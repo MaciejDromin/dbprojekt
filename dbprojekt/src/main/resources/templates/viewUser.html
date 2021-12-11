@@ -16,7 +16,7 @@
                 <div class="col">Ulica</div>
                 <div class="col">Kod pocztowy</div>
             </div>
-            <div th:each="user : ${users}" class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
+            <div class="mt-4 row row-cols-1 row-cols-sm-3 shadow p-3 bg-white rounded align-items-center">
                 <div th:text="${user.username}" class="col"></div>
                 <div th:text="${user.role}" class="col"></div>
                 <div th:text="${user.address.city}" class="col"></div>
